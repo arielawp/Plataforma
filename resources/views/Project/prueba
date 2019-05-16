@@ -1,0 +1,98 @@
+{{ $book->title}}
+
+
+
+<h1 class="text-center">Agregar Libros</h1>
+<hr>
+@if (Session::has('message'))
+      <div class="alert alert-info">{{ Session::get('message') }}</div>
+ @endif
+
+<div class="container">
+  <form action="{{ route('books.store') }}" method="POST">
+    @csrf
+  
+     <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <strong>Titulo:</strong>
+                <input type="text" name="title" class="form-control" placeholder="Título del Libro">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <strong>Descripción:</strong>
+                <textarea class="form-control"  name="description" placeholder="Reseña"></textarea>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+   
+</form>
+</div>
+
+--------------------------
+
+<div class="container">
+        <h1 class="text-center">Agregar asignación</h1>
+        <hr>
+        @if (Session::has('message'))
+      <div class="alert alert-info">{{ Session::get('message') }}</div>
+ @endif
+ 
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <form action="{{ route('Diseño.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="wrapper fadeInDown">
+  <div id="formContent">
+
+
+    <form>
+      <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>
+      <input type="text" id="login" class="fadeIn second" name="login" value="{{ old('nombre') }}" placeholder="Escribe el nombre proyecto">
+      <br>
+      <label for="nombre" class="col-3 col-form-label">Nombre de la actividad</label>
+      <input type="text" id="login" class="fadeIn second" name="login" value="{{ old('actividad') }}" placeholder="Escribe el nombre de la actividad">
+      <br>
+      <label for="nombre" class="col-3 col-form-label">Hora de inicio</label>
+      <input type="text" id="login" class="fadeIn second" name="login" value="{{ old('inicio') }}" placeholder="Escribe la hora de incio">
+      <br>
+      <label for="nombre" class="col-3 col-form-label">Hora de finalización de tarea asignada</label>
+      <input type="text" id="login" class="fadeIn second" name="login" value="{{ old('fin') }}" placeholder="Escribe la hora de finalización de tarea asignada">
+      <br> 
+      <label for="nombre" class="col-3 col-form-label">Fecha de la tarea asignada</label>
+      <input type="text" id="login" class="fadeIn second" name="login" value="{{ old('fecha') }}" placeholder="Escribe la fecha de la tarea asignada">
+      <br>
+      <label for="nombre" class="col-3 col-form-label">Terminino la tarea</label>
+      <input type="text" id="login" class="fadeIn second" name="login" value="{{ old('terminado') }}" placeholder="Terminino la tarea">
+      <br>
+      <label for="nombre" class="col-3 col-form-label">Escribe un comentario</label>
+      <input type="text" id="login" class="fadeIn second" name="login" value="{{ old('comentarios') }}" placeholder="Escribe un comentario">
+      <br>
+      
+      
+      
+      </div>
+</div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-group">
+                            <button name="submit" type="submit" class="btn btn-primary">Guardar</button>
+                            <a class="btn btn-success float-right" href="{{ route('Diseño.index') }}">Cancelar</a>
+                    </div>
+    </form>
+
+ 
+
+
+               
+            </div>  {{--del col-6--}}
+            <div class="d-none d-lg-block col-lg-4 col-md-12 ml-5">
+                <img src="{{ asset('images/1.png') }}" class="img-fluid" alt="">
+            </div>
+        </div>  {{--del row--}}
+    </div>  {{--del container--}}
