@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Auxi;
+use App\Text;
 use Illuminate\Http\Request;
 use Session;
 
-
-class AuxiController extends Controller
+class TextController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class AuxiController extends Controller
      */
     public function index()
     {
-        $ayuda=Auxi::orderBy('id','asc')->paginate(5);
-        return view ('auxiliar.index',compact('ayuda'));
+        $texts=Text::orderBy('id','asc')->paginate(5);
+        return view ('prueba.index',compact('texts'));
     }
 
     /**
@@ -27,7 +26,7 @@ class AuxiController extends Controller
      */
     public function create()
     {
-        return view('auxiliar.create');
+        return view('prueba.create');
 
     }
 
@@ -39,7 +38,6 @@ class AuxiController extends Controller
      */
     public function store(Request $request)
     {
-        
         $request->validate([
             'nombre'=>'required',
             'actividad'=>'required',
@@ -49,19 +47,19 @@ class AuxiController extends Controller
             'terminado'=>'required',
             'comentarios'=>'required',
         ]);
-        auxi::create($request->all());
+        Text::create($request->all());
 
         Session::flash('message','Tarea asignada correctamente');
-        return redirect()->route('auxiliar.index');
+        return redirect()->route('prueba.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Auxi  $auxi
+     * @param  \App\Text  $text
      * @return \Illuminate\Http\Response
      */
-    public function show(Auxi $auxi)
+    public function show(Text $text)
     {
         //
     }
@@ -69,35 +67,44 @@ class AuxiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Auxi  $auxi
+     * @param  \App\Text  $text
      * @return \Illuminate\Http\Response
      */
-    public function edit(Auxi $auxi)
+    public function edit(Text $text)
     {
-        return view('auxiliar.edit');
-
+        return view ('prueba.edit');
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Auxi  $auxi
+     * @param  \App\Text  $text
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Auxi $auxi)
+    public function update(Request $request, Text $text)
     {
-      
-
+        $request->validate([
+            'nombre'=>'required',
+            'actividad'=>'required',
+            'inicio'=>'required',
+            'fin'=>'required',
+            'fecha'=>'required',
+            'terminado'=>'required',
+            'comentarios'=>'required',
+        ]);
+         $text->update($request->all());
+        Session::flash('message','Libro actualizado correctamente');
+        return redirect()->route('prueba.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Auxi  $auxi
+     * @param  \App\Text  $text
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Auxi $auxi)
+    public function destroy(Text $text)
     {
         //
     }

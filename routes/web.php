@@ -19,3 +19,4 @@ Route::resource('Diseño' , 'DisenoController');
 Route::resource('Programador' , 'ProgramaController');
 Route::resource('Project' , 'ProjectoController');
 Route::resource('auxiliar' , 'AuxiController');
+Route::resource('prueba' , 'TextController');

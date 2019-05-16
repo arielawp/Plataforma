@@ -1,13 +1,17 @@
-@extends('auxiliar.layout')
+@extends('prueba.layout')
 
 @section('content')
 
-<H1 class="text-center"> &copy; ariel</H1>
+<H1 class="text-center">&copy; ariel</H1>
 <div class="container">
 
     
-<a class="btn btn-primary" href="{{route('auxiliar.create')}}">Asignar proyecto</a>
-<a class="btn btn-primary mb-3 float-right" href="">Imprimir</a>
+<a class="btn btn-primary" href="{{route('prueba.create')}}">Asignar proyecto</a>
+<a class="btn btn-primary mb-3 float-right" href="  ">Imprimir</a>
+
+
+
+
 
 <table class="table">
   <thead class="thead-dark">
@@ -27,21 +31,22 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($ayuda as $auxi)
-    <tr>
-      <th scope="row">{{ $auxi->id }}</th>
-      <td>{{ $auxi->nombre }}</td>
-      <td>{{ $auxi->actividad }}</td>
-      <td>{{ $auxi->inicio }}</td>
-      <td>{{ $auxi->fin }}</td>
-      <td>{{ $auxi->tiempo }}</td>
-      <td>{{ $auxi->fecha }}</td>
-      <td>{{ $auxi->terminado }}</td>
-      <td>{{ $auxi->comentarios }}</td>
 
-      <td><a class=" btn btn-info botoninput" href=" {{ route('auxiliar.edit', $auxi->id)}}"><i class="fas fa-edit"></i>
+  @foreach($texts as $text)
+    <tr>
+      <th scope="row">{{ $text->id }}</th>
+      <td>{{ $text->nombre }}</td>
+      <td>{{ $text->actividad }}</td>
+      <td>{{ $text->inicio }}</td>
+      <td>{{ $text->fin }}</td>
+      <td>{{ $text->tiempo }}</td>
+      <td>{{ $text->fecha }}</td>
+      <td>{{ $text->terminado }}</td>
+      <td>{{ $text->comentarios }}</td>
+
+      <td><a class=" btn btn-info botoninput" href=" {{ route('prueba.edit', $text->id)}}"><i class="fas fa-edit"></i>
     </a>
-    <form action="{{ route('auxiliar.destroy',$auxi->id) }}" method="POST">
+    <form action="{{ route('prueba.destroy',$text->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
       
@@ -55,7 +60,7 @@
   </tbody>
 </table>
 
-{{$ayuda->links()}}
+{{$texts->links()}}
 </div>
 
 

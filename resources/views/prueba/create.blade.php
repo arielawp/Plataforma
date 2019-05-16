@@ -1,4 +1,4 @@
-@extends('auxiliar.layout')
+@extends('prueba.layout')
 
 @section('content')
 <h1 class="text-center">Asignar tarea</h1>
@@ -10,7 +10,7 @@
  
  <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <form action="{{ route('auxiliar.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('prueba.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="wrapper fadeInDown">
   <div id="formContent">
@@ -51,7 +51,7 @@
                     <br>
                     <div class="form-group">
                             <button name="submit" type="submit" class="btn btn-primary">Guardar</button>
-                            <a class="btn btn-success float-right" href="{{ route('auxiliar.index') }}">Cancelar</a>
+                            <a class="btn btn-success float-right" href="{{ route('prueba.index') }}">Cancelar</a>
                     </div>
     </form>
 
