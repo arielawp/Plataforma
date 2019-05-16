@@ -44,7 +44,8 @@
       <input type="text" id="login" class="fadeIn second" name="comentarios" value="{{ $programa->comentarios }}" placeholder="Escribe un comentario">
       <br>
       
-      
+     
+
       
       </div>
 </div>

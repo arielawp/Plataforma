@@ -15,7 +15,7 @@
 <div class="container">
         @if(count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> Hay algunos problemas con tus entradas.<br><br>
+                <strong>Upss!</strong> Hay algunos problemas con tus entradas.<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>

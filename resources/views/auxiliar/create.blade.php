@@ -7,8 +7,7 @@
       <div class="alert alert-info">{{ Session::get('message') }}</div>
  @endif
  <div class="container">
- 
- <div class="row">
+     <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <form action="{{ route('auxiliar.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf

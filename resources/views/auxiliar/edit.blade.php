@@ -17,10 +17,7 @@
                     <div class="wrapper fadeInDown">
   <div id="formContent">
 
-        tostring/(char);
-        atrinf(booleano);
-        variavle(in6);
-        noq(char);
+
 
     <form>
       <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>
