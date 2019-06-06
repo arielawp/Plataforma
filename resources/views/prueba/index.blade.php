@@ -39,10 +39,12 @@
       <td>{{ $text->actividad }}</td>
       <td>{{ $text->inicio }}</td>
       <td>{{ $text->fin }}</td>
-      <td>{{ $text->tiempo }}</td>
+      <td>{{ $texts=$text->tiempo+$text->tiempo }}</td>
+
       <td>{{ $text->fecha }}</td>
       <td>{{ $text->terminado }}</td>
       <td>{{ $text->comentarios }}</td>
+
 
       <td><a class=" btn btn-info botoninput" href=" {{ route('prueba.edit', $text->id)}}"><i class="fas fa-edit"></i>
     </a>
@@ -60,8 +62,8 @@
   </tbody>
 </table>
 
-{{$texts->links()}}
 </div>
+
 
 
 

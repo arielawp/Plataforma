@@ -38,19 +38,19 @@ class TextController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nombre'=>'required',
-            'actividad'=>'required',
-            'inicio'=>'required',
-            'fin'=>'required',
-            'fecha'=>'required',
-            'terminado'=>'required',
-            'comentarios'=>'required',
-        ]);
-        Text::create($request->all());
+            $request->validate([
+                'nombre'=>'required',
+                'actividad'=>'required',
+                'inicio'=>'required',
+                'fin'=>'required',
+                'fecha'=>'required',
+                'terminado'=>'required',
+                'comentarios'=>'required',
+            ]);
+            Text::create($request->all());
 
-        Session::flash('message','Tarea asignada correctamente');
-        return redirect()->route('prueba.index');
+            Session::flash('message','Tarea asignada correctamente');
+            return redirect()->route('prueba.index');
     }
 
     /**
@@ -72,7 +72,8 @@ class TextController extends Controller
      */
     public function edit(Text $text)
     {
-        return view ('prueba.edit');
+        return view('prueba.edit',compact('text'));
+
     }
 
     /**

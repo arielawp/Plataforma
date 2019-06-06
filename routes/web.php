@@ -20,3 +20,7 @@ Route::resource('Programador' , 'ProgramaController');
 Route::resource('Project' , 'ProjectoController');
 Route::resource('auxiliar' , 'AuxiController');
 Route::resource('prueba' , 'TextController');
+Route::resource('usuario', 'UsuarioController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

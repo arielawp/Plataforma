@@ -1,0 +1,21 @@
+body{
+    margin: 2px;
+    padding: 2px;
+    background: #1745ff;
+}
+    h1{
+    color: #fff;
+    border: 5px  #ff1745 solid;
+    background: #000;
+    text-align: center
+    
+}
+a{
+    color: #fff;
+    font-size: 50px;
+    text-align: end;
+}
+a:hover{
+    color: #ff1745;
+    text-align: end;
+}

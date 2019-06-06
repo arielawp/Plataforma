@@ -1,16 +1,16 @@
-@extends('Programador.layout')
+@extends('layouts.admin')
 
 @section('content')
 
-<H1 class="text-center">&copy; ariel</H1>
+<H1 class="text-center">&copy; <strong>Todos los derechos reservados Novemp 2019 </strong> </H1>
 <div class="container">
 
     
 <a class="btn btn-primary" href="{{route('Programador.create')}}">Asignar proyecto</a>
 <a class="btn btn-primary mb-3 float-right" href="  ">Imprimir</a>
-
-
-
+<br>
+<br>
+<br>
 
 
 <table class="table">
@@ -26,8 +26,6 @@
       <th scope='col'>Terminado</th>
       <th scope='col'>Comentarios</th>
       <th scope='col'>Acciones</th>
-      
-
     </tr>
   </thead>
   <tbody>

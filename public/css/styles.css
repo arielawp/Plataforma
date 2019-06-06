@@ -1,0 +1,27 @@
+ .navbar-default, navbar-brand{
+     background: blue;
+ }
+
+ .table{
+    border: rgb(255, 0, 0) 5px solid;
+
+ }
+.table{
+    border-collapse: rgb(0, 81, 255) 5px solid;
+
+    
+}
+.nav ul{
+    border: rgb(0, 81, 255) 3px solid;
+
+}
+h1 , .strong , .text-center{
+    border: rgb(0, 81, 255) 3px solid;
+    color: rgb(220, 225, 230);
+
+}
+
+*{
+    padding: 0.5px;
+    margin: 0.5px;  
+}

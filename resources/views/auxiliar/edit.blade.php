@@ -1,63 +1,136 @@
 @extends('auxiliar.layout')
 
 @section('content')
-<h1 class="text-center">Actualizar tarea</h1>
-<hr>
-@if (Session::has('message'))
-      <div class="alert alert-info">{{ Session::get('message') }}</div>
- @endif
- <div class="container">
- 
- <div class="row">
+<div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <form action="{{ route('auxiliar.update' , $ayuda->id ) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('auxiliar.update', $auxi->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
+                    
+                    <div class="container">
+                    <div class="form-group row">
+                        <label for="nombre" class="col-3 col-form-label">Nombre</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input id="nombre" name="nombre" value={{ $text->nombre }} placeholder="inserta la visión" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
 
-    @method('PUT')
-                    <div class="wrapper fadeInDown">
-  <div id="formContent">
-
-
-
-    <form>
-      <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>
-      <input type="text" id="ayudas" class="fadeIn second" name="nombre" value="{{ $auxi->nombre }}" placeholder="Escribe el nombre proyecto">
-      <br>
-      <label for="nombre" class="col-3 col-form-label">Nombre de la actividad</label>
-      <input type="text" id="ayudas" class="fadeIn second" name="actividad" value="{{ $auxi->actividad }}" placeholder="Escribe el nombre de la actividad">
-      <br>
-      <label for="nombre" class="col-3 col-form-label">Hora de inicio</label>
-      <input type="text" id="ayudas" class="fadeIn second" name="inicio" value="{{ $auxi->inicio }}" placeholder="Escribe la hora de incio">
-      <br>
-      <label for="nombre" class="col-3 col-form-label">Hora de finalización de tarea asignada</label>
-      <input type="text" id="ayudas" class="fadeIn second" name="fin" value="{{ $auxi->fin }}" placeholder="Escribe la hora de finalización de tarea asignada">
-      <br> 
-      <label for="nombre" class="col-3 col-form-label">Tiempo estimado de la actividad</label>
-      <input type="text" id="ayudas" class="fadeIn second" name="tiempo" value="{{ $auxi->tiempo }}" placeholder="Escribe el tiempo estimado de la actividad">
-      <br> 
-      <label for="nombre" class="col-3 col-form-label">Fecha de la tarea asignada</label>
-      <input type="text" id="ayudas" class="fadeIn second" name="fecha" value="{{ $auxi->fecha }}" placeholder="Escribe la fecha de la tarea asignada">
-      <br>
-      <label for="nombre" class="col-3 col-form-label">Terminino la tarea</label>
-      <input type="text" id="ayudas" class="fadeIn second" name="terminado" value="{{ $auxi->terminado }}" placeholder="Terminino la tarea">
-      <br>
-      <label for="nombre" class="col-3 col-form-label">Escribe un comentario</label>
-      <input type="text" id="ayudas" class="fadeIn second" name="comentarios" value="{{ $auxi->comentarios }}" placeholder="Escribe un comentario">
-      <br>
-      
-      
-      
-      </div>
-</div>
                     <br>
+                    <div class="form-group row">
+                        <label for="nombre" class="col-3 col-form-label">actividad</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input id="nombre" name="actiividad" value={{ $text->actividad }} placeholder="inserta los valores" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
                     <br>
+                    <div class="form-group row">
+                        <label for="nombre" class="col-3 col-form-label">Hora de inicio</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input id="nombre" name="inicio" value={{ $text->inicio }} placeholder="inserta los valores" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="nombre" class="col-3 col-form-label">fin</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input id="nombre" name="fin" value={{ $text->fin }} placeholder="inserta los valores" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="nombre" class="col-3 col-form-label">tiempo</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input id="nombre" name="tiempo" value={{ $text->tiempo }} placeholder="inserta los valores" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="nombre" class="col-3 col-form-label">fecha</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input id="nombre" name="fecha" value={{ $text->fecha }} placeholder="inserta los valores" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="nombre" class="col-3 col-form-label">terminado</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input id="nombre" name="terminado" value={{ $text->terminado }} placeholder="inserta los valores" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="nombre" class="col-3 col-form-label">fecha</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <input id="nombre" name="comentarios" value={{ $text->comentarios }} placeholder="inserta los valores" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
                     <br>
                     <div class="form-group">
                             <button name="submit" type="submit" class="btn btn-primary">Guardar</button>
                             <a class="btn btn-success float-right" href="{{ route('auxiliar.index') }}">Cancelar</a>
                     </div>
-    </form>
+                </form>
+            </div>  {{--del col-6--}}
+         
+                    </div>
+                    
+        </div>  {{--del row--}}
+    </div>
 
-</div>
- </div>
 @endsection
