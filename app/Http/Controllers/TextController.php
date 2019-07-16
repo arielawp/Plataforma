@@ -72,7 +72,7 @@ class TextController extends Controller
      */
     public function edit(Text $text)
     {
-        return view('prueba.edit',compact('text'));
+        return view('prueba.edit');
 
     }
 
@@ -94,7 +94,7 @@ class TextController extends Controller
             'terminado'=>'required',
             'comentarios'=>'required',
         ]);
-         $text->update($request->all());
+         $Text->update($request->all());
         Session::flash('message','Libro actualizado correctamente');
         return redirect()->route('prueba.index');
     }

@@ -23,7 +23,7 @@
     <div id="wrapper">
 
         
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style=" background: #000; margin-bottom: 0 ">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -54,7 +54,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Usuario<span class="fa arrow"></span></a>
+                            <a href="#"><i style="background: #000;" class="fa fa-users fa-fw" ></i> Usuario<span class="fa arrow" ></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{ route ('usuario.create') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
@@ -65,33 +65,33 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-film fa-fw"></i> Project Manager<span class="fa arrow"></span></a>
+                            <a href=""><i class="fa fa-film fa-fw"></i> Auxiliar Manager<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route('Project.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{{ route('books.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
                                     <a href="#"><i class='fa fa-list-ol fa-fw'></i> Project Manager</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-film fa-fw"></i> Programador<span class="fa arrow"></span></a>
+                         <li>
+                            <a href=""><i class="fa fa-film fa-fw"></i> Programador<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route('Programador.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{{ route ('waters.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
                                     <a href="#"><i class='fa fa-list-ol fa-fw'></i> Programador</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> 
 
                         <li>
                             <a href="#"><i class="fa fa-child fa-fw"></i> Diseñador<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{{ route('disenos.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
                                     <a href="#"><i class='fa fa-list-ol fa-fw'></i> Diseñador</a>
@@ -99,9 +99,9 @@
                             </ul>
                         </li>
 
-                     
+                     <!-- 
                         <li>
-                            <a href="#"><i class="fa fa-film fa-fw"></i> Auxiliar<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-film fa-fw"></i> Project Manager<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{ route ('auxiliar.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
@@ -110,7 +110,20 @@
                                     <a href="#"><i class='fa fa-list-ol fa-fw'></i> Auxiliar </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
+
+<!-- 
+                        <li>
+                            <a href="#"><i class="fa fa-film fa-fw"></i> Prueba<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ route ('prueba.index') }}"><i class='fa fa-plus fa-fw'></i> Ejemplo</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Ejemplo </a>
+                                </li>
+                            </ul>
+                        </li> -->
 
                     </ul>
                 </div>

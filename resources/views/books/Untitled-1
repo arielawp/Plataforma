@@ -1,0 +1,27 @@
+
+//vamos al controlador
+
+public function suma()
+{
+    $books =Book::orderBy('id','ASC')->paginate(12);
+    
+    //aqui se realiza la suma
+    $books = book::all();
+    $tiempo = 0;
+    foreach($books as $book){
+    $tiempo = $books->total + $book;
+    }
+    
+adsword servicio general de plataforma
+ads para campañas 
+
+    return view('books.index')->with('books', $books)->with('tiempo',$tiempo);
+
+
+  
+}
+
+// también existe un metodo sum() pero hay que revisar la documentación de laravel 
+
+      <td>{{ $books = $book->tiempo + $book }}</td>
+      <td>{{ $projectos=$projecto->tiempo+$projecto->tiempo }}</td>

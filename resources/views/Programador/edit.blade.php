@@ -1,4 +1,4 @@
-@extends('Programador.layout')
+@extends('layouts.admin')
 
 @section('content')
 <h1 class="text-center">Actualizar tarea</h1>

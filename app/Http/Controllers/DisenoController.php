@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Diseno;
-use Illuminate\Http\Request;
 use Session;
+use Illuminate\Http\Request;
+
 class DisenoController extends Controller
 {
     /**
@@ -14,8 +15,8 @@ class DisenoController extends Controller
      */
     public function index()
     {
-        $disenos=Diseno::orderBy('id','asc')->paginate(5);
-        return view ('Diseño.index',compact('disenos'));
+        $disenos=Diseno::orderBy('id', 'ASC')->paginate(10);
+        return view ('disenos.index',compact('disenos'));
     }
 
     /**
@@ -25,8 +26,7 @@ class DisenoController extends Controller
      */
     public function create()
     {
-        return view('Diseño.create');
-
+        return view ('disenos.create');
     }
 
     /**
@@ -40,20 +40,14 @@ class DisenoController extends Controller
         $request->validate([
             'nombre'=>'required',
             'actividad'=>'required',
-            'inicio'=>'required',
-            'fin'=>'required',
-            'tiempo'=>'required',
+           
             'fecha'=>'required',
-            'terminado'=>'required',
-            'comentarios'=>'required',
+          
         ]);
-        diseno::create($request->all());
+        Diseno::create($request->all());
 
         Session::flash('message','Tarea asignada correctamente');
-        return redirect()->route('Diseño.index');
-
-        
-    
+        return redirect()->route('disenos.index');
     }
 
     /**
@@ -64,7 +58,7 @@ class DisenoController extends Controller
      */
     public function show(Diseno $diseno)
     {
-        
+        //
     }
 
     /**
@@ -75,7 +69,8 @@ class DisenoController extends Controller
      */
     public function edit(Diseno $diseno)
     {
-        return view('Diseño.edit',compact('Diseno'));
+        return view ('disenos.edit', compact ('diseno'));
+        
     }
 
     /**
@@ -90,18 +85,13 @@ class DisenoController extends Controller
         $request->validate([
             'nombre'=>'required',
             'actividad'=>'required',
-            'inicio'=>'required',
-            'fin'=>'required',
-            'tiempo'=>'required',
+           
             'fecha'=>'required',
-            'terminado'=>'required',
-            'comentarios'=>'required',
         ]);
-        $diseno->update($request->all());
+        Diseno::create($request->all());
 
-
-        Session::flash('message','Tarea editada y gurdada correctamente');
-        return redirect()->route('Project.index');
+        Session::flash('message','Tarea asignada correctamente');
+        return redirect()->route('disenos.index');
         
     }
 
@@ -113,6 +103,8 @@ class DisenoController extends Controller
      */
     public function destroy(Diseno $diseno)
     {
-        //
+        $diseno->delete();
+        Session::flash('message','Libro ha sido borrado  correctamente');
+        return redirect()->route('disenos.index');
     }
 }

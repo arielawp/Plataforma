@@ -16,8 +16,8 @@ class AuxiController extends Controller
      */
     public function index()
     {
-        $ayuda=Auxi::orderBy('id','asc')->paginate(5);
-        return view ('auxiliar.index',compact('ayuda'));
+        $ayudas=Auxi::orderBy('id','asc')->paginate(5);
+        return view ('auxiliar.index',compact('ayudas'));
     }
 
     /**

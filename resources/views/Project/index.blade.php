@@ -3,11 +3,13 @@
 @section('content')
 
 <H1 class="text-center">&copy; ariel</H1>
+<center><h1>Project Manager</h1></center>
 <div class="container">
 
     
 <a class="btn btn-primary" href="{{route('Project.create')}}">Asignar proyecto</a>
-
+<br>
+<br>
 
 
 
@@ -16,10 +18,12 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">Id</th>
+      <th scope="col">Orden</th>
       <th scope="col">Nombre del proyecto</th>
       <th scope="col">Actividad</th>
       <th scope="col">inicio del proyecto</th>
       <th scope="col">Fin del proyecto</th>
+      <th scope="col">contador</th>
       <th scope="col">Tiempo estimado de la actividad</th>
       <th scope='col'>Fecha</th>
       <th scope='col'>Terminado</th>
@@ -33,10 +37,12 @@
   @foreach($projectos as $projecto)
     <tr>
       <th scope="row">{{ $projecto->id }}</th>
+      <td>{{ $projecto->orden }}</td>
       <td>{{ $projecto->nombre }}</td>
       <td>{{ $projecto->actividad }}</td>
       <td>{{ $projecto->inicio }}</td>
       <td>{{ $projecto->fin }}</td>
+      <td>{{ $projecto->contador }}</td>
       <td>{{ $projecto->tiempo }}</td>
       <td>{{ $projecto->fecha }}</td>
       <td>{{ $projecto->terminado }}</td>
@@ -58,7 +64,6 @@
   </tbody>
 </table>
 
-{{$projectos->links()}}
 </div>
 
 

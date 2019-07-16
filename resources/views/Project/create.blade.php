@@ -1,4 +1,4 @@
-@extends('Project.layout')
+@extends('layouts.admin')
 
 @section('content')
 <h1 class="text-center">Asignar tarea</h1>
@@ -16,7 +16,10 @@
   <div id="formContent">
 
 
-    <form>
+  <form>
+  <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>
+      <input type="text" id="login" class="fadeIn second" name="orden" value="{{ old('orden') }}" placeholder="Escribe el nombre proyecto">
+      <br>
       <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>
       <input type="text" id="login" class="fadeIn second" name="nombre" value="{{ old('nombre') }}" placeholder="Escribe el nombre proyecto">
       <br>
@@ -24,17 +27,20 @@
       <input type="text" id="login" class="fadeIn second" name="actividad" value="{{ old('actividad') }}" placeholder="Escribe el nombre de la actividad">
       <br>
       <label for="nombre" class="col-3 col-form-label">Hora de inicio</label>
-      <input type="text" id="login" class="fadeIn second" name="inicio" value="{{ old('inicio') }}" placeholder="Escribe la hora de incio">
+      <input type="time" id="login" class="fadeIn second" name="inicio" value="{{ old('inicio') }}" placeholder="Escribe la hora de incio">
       <br>
       <label for="nombre" class="col-3 col-form-label">Hora de finalización de tarea asignada</label>
-      <input type="text" id="login" class="fadeIn second" name="fin" value="{{ old('fin') }}" placeholder="Escribe la hora de finalización de tarea asignada">
+      <input type="time" id="login" class="fadeIn second" name="fin" value="{{ old('fin') }}" placeholder="Escribe la hora de finalización de tarea asignada">
       <br> 
-      <label for="nombre" class="col-3 col-form-label">Fecha de la tarea asignada</label>
-      <input type="text" id="login" class="fadeIn second" name="fecha" value="{{ old('fecha') }}" placeholder="Escribe la fecha de la tarea asignada">
-      <br>
+      <label for="nombre" class="col-3 col-form-label">suma</label>
+      <input type="text" id="login" class="fadeIn second" name="contador" value="{{ old('contador') }}" placeholder="Escribe el tiempo estimado de la actividad">
+      <br> 
       <label for="nombre" class="col-3 col-form-label">Tiempo estimado de la actividad</label>
       <input type="text" id="login" class="fadeIn second" name="tiempo" value="{{ old('tiempo') }}" placeholder="Escribe el tiempo estimado de la actividad">
       <br> 
+      <label for="nombre" class="col-3 col-form-label">Fecha de la tarea asignada</label>
+      <input type="date" id="login" class="fadeIn second" name="fecha" value="{{ old('fecha') }}" placeholder="Escribe la fecha de la tarea asignada">
+      <br>
       <label for="nombre" class="col-3 col-form-label">Terminino la tarea</label>
       <input type="text" id="login" class="fadeIn second" name="terminado" value="{{ old('terminado') }}" placeholder="Terminino la tarea">
       <br>
@@ -54,7 +60,6 @@
                             <a class="btn btn-success float-right" href="{{ route('Project.index') }}">Cancelar</a>
                     </div>
     </form>
-
 </div>
  </div>
 @endsection

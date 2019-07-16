@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Projecto extends Model
 {
-    protected $fillable = ['nombre', 'actividad' , 'inicio' , 'fin' , 'tiempo' , 'fecha' , 'terminado' , 'comentarios'];
+    protected $fillable = ['orden', 'nombre', 'actividad' , 'inicio' , 'fin' , 'contador' , 'tiempo' , 'fecha' , 'terminado' , 'comentarios'];
 }

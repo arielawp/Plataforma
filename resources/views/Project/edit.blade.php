@@ -1,4 +1,4 @@
-@extends('Project.layout')
+@extends('layouts.admin')
 
 @section('content')
 <h1 class="text-center">Actualizar tarea</h1>
@@ -18,7 +18,11 @@
   <div id="formContent">
 
 
+
     <form>
+    <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>
+      <input type="text" id="login" class="fadeIn second" name="orden" value="{{ $projecto->orden }}" placeholder="Escribe el nombre proyecto">
+      <br>
       <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>
       <input type="text" id="login" class="fadeIn second" name="nombre" value="{{ $projecto->nombre }}" placeholder="Escribe el nombre proyecto">
       <br>
@@ -30,6 +34,9 @@
       <br>
       <label for="nombre" class="col-3 col-form-label">Hora de finalización de tarea asignada</label>
       <input type="text" id="login" class="fadeIn second" name="fin" value="{{ $projecto->fin }}" placeholder="Escribe la hora de finalización de tarea asignada">
+      <br> 
+      <label for="nombre" class="col-3 col-form-label">Suma</label>
+      <input type="text" id="login" class="fadeIn second" name="contador" value="{{ $projecto->contador }}" placeholder="Escribe la hora de finalización de tarea asignada">
       <br> 
       <label for="nombre" class="col-3 col-form-label">Tiempo estimado de la actividad</label>
       <input type="text" id="login" class="fadeIn second" name="tiempo" value="{{ $projecto->tiempo }}" placeholder="Escribe el tiempo estimado de la actividad">

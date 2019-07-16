@@ -8,7 +8,7 @@ body{
 	padding:0;
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
-	background:#fff;
+	background:#3c3c3c;
 }
 body a{
     transition:0.5s all;
@@ -64,7 +64,7 @@ label{
 	margin-right: 2.5%;
 }
 .header-info h1 {
-	color:#fff;
+	color:#3c3c3c;
 	font-size:3.5em;
 	font-weight:700;
 	margin-bottom:12px;
@@ -72,7 +72,7 @@ label{
 	border-bottom:1px solid #4b4b4b;
 }
 p.age {
-	color:#f4f4f4;
+	color:##3c3c3c;
 	font-size:1.15em;
 	font-weight:400;
 	margin:1.5em 0;
@@ -166,7 +166,7 @@ i.video1 {
 }
 .menu ul li {
 	list-style-type:none;
-	border-bottom:1px solid #4c4c4c;
+	border-bottom:1px solid #fff;
 }
 .menu ul li a{
 	padding:12px 22px;

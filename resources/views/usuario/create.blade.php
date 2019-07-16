@@ -15,8 +15,11 @@
 		{!!Form::label('password','Contraseña:')!!}
 		{!!Form::password('password',['class'=>'form-control','placeholder'=>'Ingresa el Nombre del usuario'])!!}
 	</div>
+
+
+
 	{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
-<a href="{{ route ('usuario.index') }}">Regresar</a>
+	<a href="{{ url ('/') }}">Regresar</a>
 	{!!Form::close()!!}
 	@endsection
 

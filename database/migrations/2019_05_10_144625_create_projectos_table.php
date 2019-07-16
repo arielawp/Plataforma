@@ -15,10 +15,12 @@ class CreateProjectosTable extends Migration
     {
         Schema::create('projectos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('orden');
             $table->string('nombre');
             $table->string('actividad');
             $table->string('inicio');
             $table->string('fin');
+            $table->string('contador');
             $table->string('tiempo');
             $table->string('fecha');
             $table->string('terminado');

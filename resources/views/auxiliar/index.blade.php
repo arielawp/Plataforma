@@ -3,6 +3,8 @@
 @section('content')
 
 <H1 class="text-center"> &copy; ariel</H1>
+<center><h1>Auxiliar</h1></center>
+
 <div class="container">
 
     
@@ -17,6 +19,7 @@
       <th scope="col">Actividad</th>
       <th scope="col">inicio del proyecto</th>
       <th scope="col">Fin del proyecto</th>
+      <th scope="col">contador</th>
       <th scope="col">Tiempo estimado de la actividad</th>
       <th scope='col'>Fecha</th>
       <th scope='col'>Terminado</th>
@@ -34,7 +37,8 @@
       <td>{{ $auxi->actividad }}</td>
       <td>{{ $auxi->inicio }}</td>
       <td>{{ $auxi->fin }}</td>
-      <td>{{ $auxi->tiempo }}</td>
+      <td>{{ $auxi->contador }}</td>
+      <td>{{ $ayudas=$auxi->tiempo+$auxi->tiempo }}</td>
       <td>{{ $auxi->fecha }}</td>
       <td>{{ $auxi->terminado }}</td>
       <td>{{ $auxi->comentarios }}</td>
@@ -55,7 +59,7 @@
   </tbody>
 </table>
 
-{{$ayuda->links()}}
+
 </div>
 
 

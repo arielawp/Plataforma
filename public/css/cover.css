@@ -1,0 +1,193 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+    body {
+background-color: #000!important;
+}
+.slide {
+    width: 100%;
+}
+img.sectionh1.trip {
+    width: 100%;
+    opacity: 0.5;
+}
+.contenth {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 100vh;
+}
+.sectionh1 {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.trip{display:none;}
+
+@-webkit-keyframes fade {
+ 0% {opacity: 0} 
+
+100% {opacity: 1}
+}
+
+@-moz-keyframes fade{
+ 0% {opacity: 0} 
+
+100% {opacity: 1}
+}
+
+@keyframes fade {
+ 0% {opacity: 0} 
+
+100% {opacity: 1}
+    }
+@-o-keyframes fade {
+ 0% {opacity: 0} 
+
+100% {opacity: 1}
+
+}
+
+@keyframes fade {
+ 0% {opacity: 0} 
+
+100% {opacity: 1}
+}
+
+.ine{
+    height: 500px;  
+}
+.contentine{
+animation: fade 1s;
+  -webkit-animation-name: fade 1s;
+animation-name: fade 1s;
+-moz-animation: fade 1s;
+-o-animation: fade 1s;
+
+  
+}
+.btninicio{
+    margin-top: 80px;
+}
+
+
+.logine{
+    width: 400px;
+    padding-top: 50px;
+}
+@media only screen and (max-width: 768px){
+    .logine{
+    width: 50%;
+    height: auto;
+    padding-top: 30px;
+    }
+    .menu a{
+    font-size:18px;
+}
+
+}
+@media only screen and (max-width: 500px){
+    .logine{
+    width: 80%;
+    height: auto;
+    padding-top: 30px;
+    }
+    .menu a{
+    font-size:18px;
+}
+
+}
+
+.inedesr{
+    padding-top: 23.3%;
+}
+.container{
+    max-width:100%;
+    height: 100%;
+}
+.noso, .contact, .produ{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+}
+.noso{    padding-top: 150px;
+    
+}
+.contact{    padding-top: 150px;
+    
+}
+.produ{    padding-top: 200px;}
+
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 100%;
+}
+}
+@media (max-width: 1300px) {
+    
+.ine {
+    height: 450px;
+}
+
+}
+
+@media (max-width: 800px) {
+ 
+.ine {
+    height: 380px;
+}
+.inedesr {
+    padding-top: 0px;
+}
+.noso {
+    padding-top: 50px;
+        text-align: center;
+}
+.contact{    padding-top: 10px;
+    text-align: center;
+}
+.produ{    padding-top: 10px;
+    text-align: center;}
+}
+@media (max-width: 800px) {
+
+
+.inedesr {
+    padding-top: 0px;
+}
+.noso {
+    padding-top: 50px;
+        text-align: center;
+}
+.contact{    padding-top: 20px;
+    text-align: center;
+    
+}
+.produ{    padding-top: 20px;
+    text-align: center;}
+}
+
+
+
+
+

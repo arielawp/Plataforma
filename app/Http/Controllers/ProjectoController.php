@@ -39,6 +39,7 @@ class ProjectoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'orden'=>'required',
             'nombre'=>'required',
             'actividad'=>'required',
             'inicio'=>'required',
@@ -72,7 +73,7 @@ class ProjectoController extends Controller
      */
     public function edit(Projecto $projecto)
     {
-        return view('Project.edit',compact('Diseno'));
+        return view('Project.edit',compact('projecto'));
     }
 
     /**
@@ -85,6 +86,7 @@ class ProjectoController extends Controller
     public function update(Request $request, Projecto $projecto)
     {
         $request->validate([
+            'orden'=>'required',
             'nombre'=>'required',
             'actividad'=>'required',
             'inicio'=>'required',
@@ -94,7 +96,7 @@ class ProjectoController extends Controller
             'terminado'=>'required',
             'comentarios'=>'required',
         ]);
-        $diseno->update($request->all());
+        $projecto->update($request->all());
 
 
         Session::flash('message','Tarea editada y gurdada correctamente');

@@ -3,6 +3,7 @@
 @section('content')
 
 <H1 class="text-center">&copy; <strong>Todos los derechos reservados Novemp 2019 </strong> </H1>
+<center><h1>Programadors</h1></center>
 <div class="container">
 
     
@@ -21,6 +22,7 @@
       <th scope="col">Actividad</th>
       <th scope="col">inicio del proyecto</th>
       <th scope="col">Fin del proyecto</th>
+      <th scope="col">contador</th>
       <th scope="col">Tiempo estimado de la actividad</th>
       <th scope='col'>Fecha</th>
       <th scope='col'>Terminado</th>
@@ -37,7 +39,8 @@
       <td>{{ $programa->actividad }}</td>
       <td>{{ $programa->inicio }}</td>
       <td>{{ $programa->fin }}</td>
-      <td>{{ $programa->tiempo }}</td>
+      <td>{{ $programa->contador }}</td>
+      <td>{{ $books=$programa->tiempo+$programa->tiempo }}</td>
       <td>{{ $programa->fecha }}</td>
       <td>{{ $programa->terminado }}</td>
       <td>{{ $programa->comentarios }}</td>
@@ -58,7 +61,6 @@
   </tbody>
 </table>
 
-{{$books->links()}}
 </div>
 
 

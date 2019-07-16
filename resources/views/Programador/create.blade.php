@@ -1,4 +1,4 @@
-@extends('Programador.layout')
+@extends('layouts.admin')
 
 @section('content')
 <h1 class="text-center">Asignar tarea</h1>
@@ -29,9 +29,12 @@
       <label for="nombre" class="col-3 col-form-label">Hora de finalización de tarea asignada</label>
       <input type="text" id="login" class="fadeIn second" name="fin" value="{{ old('fin') }}" placeholder="Escribe la hora de finalización de tarea asignada">
       <br> 
+      <label for="nombre" class="col-3 col-form-label">Contador</label>
+      <input type="text" id="login" class="fadeIn second" name="contador" value="{{ old('contador') }}" placeholder="Escribe el tiempo estimado de la actividad">
+      <br>
       <label for="nombre" class="col-3 col-form-label">Tiempo estimado de la actividad</label>
-      <input type="text" id="login" class="fadeIn second" name="tiempo" value="{{ old('tiempo') }}" placeholder="Escribe el tiempo estimado de la actividad">
-      <br> 
+      <input type="text" id="login" class="fadeIn second" name="tiempo" value="{{ old('tiempo') }}" placeholder="contador">
+      <br>   
       <label for="nombre" class="col-3 col-form-label">Fecha de la tarea asignada</label>
       <input type="text" id="login" class="fadeIn second" name="fecha" value="{{ old('fecha') }}" placeholder="Escribe la fecha de la tarea asignada">
       <br>

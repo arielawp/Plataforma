@@ -1,4 +1,4 @@
-@extends('prueba.layout')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -21,6 +21,7 @@
       <th scope="col">Actividad</th>
       <th scope="col">inicio del proyecto</th>
       <th scope="col">Fin del proyecto</th>
+      <th scope="col">Contador</th>
       <th scope="col">Tiempo estimado de la actividad</th>
       <th scope='col'>Fecha</th>
       <th scope='col'>Terminado</th>
@@ -39,8 +40,8 @@
       <td>{{ $text->actividad }}</td>
       <td>{{ $text->inicio }}</td>
       <td>{{ $text->fin }}</td>
+      <td>{{ $text->contador }}</td>
       <td>{{ $texts=$text->tiempo+$text->tiempo }}</td>
-
       <td>{{ $text->fecha }}</td>
       <td>{{ $text->terminado }}</td>
       <td>{{ $text->comentarios }}</td>
@@ -48,7 +49,7 @@
 
       <td><a class=" btn btn-info botoninput" href=" {{ route('prueba.edit', $text->id)}}"><i class="fas fa-edit"></i>
     </a>
-    <form action="{{ route('prueba.destroy',$text->id) }}" method="POST">
+    <form action="{{ route('prueba.destroy' , $text->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
       
