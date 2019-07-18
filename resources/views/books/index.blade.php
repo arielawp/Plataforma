@@ -24,7 +24,7 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">Orden de la actividad</th>
+      <th scope="col">Prioridad</th>
       <th scope="col">Nombre del proyecto</th>
       <th scope="col">Actividad</th>
       <th scope="col">inicio del proyecto</th>

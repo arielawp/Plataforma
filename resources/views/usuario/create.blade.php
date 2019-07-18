@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 	@section('content')
 	{!!Form::open(['route'=>'usuario.store', 'method'=>'POST'])!!}
-	<H1 class="text-center">&copy; <strong>Todos los derechos reservados Novemp 2019 </strong> </H1>
+	<H1 class="text-center"> <strong>Agregar usuario </strong> </H1>
 
 	<div class="form-group">
 		{!!Form::label('nombre','Nombre:')!!}

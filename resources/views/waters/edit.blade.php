@@ -19,7 +19,7 @@
 
 
     <form>
-      <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>
+      <label for="nombre" class="col-3 col-form-label">Prioridad</label>
       <input type="text" id="" class="fadeIn second" name="orden" value={{ $water->orden }} placeholder="Escribe el nombre proyecto">
       <br>
       <label for="nombre" class="col-3 col-form-label">Nombre del proyecto</label>

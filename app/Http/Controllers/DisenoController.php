@@ -88,9 +88,9 @@ class DisenoController extends Controller
            
             'fecha'=>'required',
         ]);
-        Diseno::create($request->all());
+        $diseno->update($request->all());
 
-        Session::flash('message','Tarea asignada correctamente');
+        Session::flash('message','Tarea actualizada correctamente');
         return redirect()->route('disenos.index');
         
     }

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<H1 class="text-center">&copy; ariel</H1>
+<H1 class="text-center">example</H1>
 <div class="container">
 
     

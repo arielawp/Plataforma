@@ -80,14 +80,14 @@ class WaterController extends Controller
      */
     public function update(Request $request, Water $water)
     {
-        $request->validate([
+          $request->validate([
             'nombre' =>'required',
             'actividad'=> 'required',
             'fecha'=>'required',
         ]);
-        Water::create($request->all());
+        $water->update($request->all());
 
-        Session::flash('mesage', 'Tarea asignada correctamente');
+        Session::flash('mesage', 'Tarea actualizada correctamente');
         return redirect()->route('waters.index');
     }
 
