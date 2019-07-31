@@ -113,4 +113,26 @@ class BookController extends Controller
         Session::flash('message','Libro ha sido borrado  correctamente');
         return redirect()->route('books.index');
     }
+    public function if(Book $book)
+    
+    {
+
+        $books = Book::where('books', '=', $book)->get();
+       
+
+        if  (($books[0]['book'])==$book)
+          {
+          echo 'Si eres usuario';
+          $books = Book::where('book', '=', $book)->get();
+          $books=$books[0]['id'];
+          //Obtenemos todos los registros de los users
+          $books = Book::where('books', '=', $books)->get();
+       
+          return view('books.index', ['books'=>$books]);
+        
+          } else {
+          echo 'No eres usuario';
+          }
+
+    }
 }

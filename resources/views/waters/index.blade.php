@@ -1,13 +1,27 @@
 @extends('layouts.admin')
 
 @section('content')
-
-<H1 class="text-center">&copy; ariel</H1>
 <div class="container">
 
-    
+<br>    
 <a class="btn btn-primary" href="{{route('waters.create')}}">Asignar proyecto</a>
 <a class="btn btn-primary mb-3 float-right" href="">Imprimir</a>
+
+
+<div class="row">
+  <div class="col-md-6">
+  <h1 class="text-center"><strong>Nombre:</strong>Vero</h1>  
+
+  </div>
+  <div class="col-md-6">
+ <h1 class="text-center"><strong>Cargo:</strong>Programador</h1>
+
+  </div>
+</div> 
+  <br>
+<div class="container">
+
+
 <br>
 <br>
 
@@ -69,6 +83,7 @@
 </div>
 
 
+</div>
 
 
 @endsection 

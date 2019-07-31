@@ -38,9 +38,15 @@
       <label for="nombre" class="col-3 col-form-label">Fecha de la tarea asignada</label>
       <input type="date" id="login" class="fadeIn second" name="fecha" value="{{ old('fecha') }}" placeholder="Escribe la fecha de la tarea asignada">
       <br>
-      <label for="nombre" class="col-3 col-form-label">Terminino la tarea</label>
-      <input type="text" id="login" class="fadeIn second" name="terminado" value="{{ old('terminado') }}" placeholder="Terminino la tarea">
-      <br>
+
+      
+  <label for="nombre"  class="col-3 col-form-label" value="{{ old('terminado') }}" >Terminino la tarea</label>
+  <select id="selectbasic" name="terminado" class="form-control">
+      <option value="{{ old('terminado') }}">Si</option>
+      <option value="{{ old('terminado') }}">No</option>
+    </select>
+
+
       <label for="nombre" class="col-3 col-form-label">Escribe un comentario</label>
       <input type="text" id="login" class="fadeIn second" name="comentarios" value="{{ old('comentarios') }}" placeholder="Escribe un comentario">
       <br>

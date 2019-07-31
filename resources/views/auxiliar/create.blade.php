@@ -31,7 +31,8 @@
                                 <label for="nombre" class="col-3 col-form-label">Fecha de la tarea asignada</label>
                                 <input type="text" id="login" class="fadeIn second" name="fecha" value="{{ old('fecha') }}" placeholder="Escribe la fecha de la tarea asignada">
                                 <label for="nombre" class="col-3 col-form-label">Terminino la tarea</label>
-                                <input type="text" id="login" class="fadeIn second" name="terminado" value="{{ old('terminado') }}" placeholder="Terminino la tarea">
+                                <input type="checkbox" name="terminado" value="{{ old('terminado') }}"> Si<br>
+                                <input type="checkbox" name="terminado" value="{{ old('terminado') }}"> No<br>
                                 <label for="nombre" class="col-3 col-form-label">Escribe un comentario</label>
                                 <input type="text" id="login" class="fadeIn second" name="comentarios" value="{{ old('comentarios') }}" placeholder="Escribe un comentario">  
                         </div>

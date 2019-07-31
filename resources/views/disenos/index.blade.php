@@ -1,8 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-
-<H1 class="text-center">&copy; ariel</H1>
+<br>  
 <div class="container">
 
     
@@ -14,7 +13,16 @@
 @if (Session::has('message'))
       <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
-    <H1 class="text-center">Diseñador</H1>
+<div class="row">
+  <div class="col-md-6">
+  <h1 class="text-center"><strong>Nombre:</strong>Nancy</h1>  
+
+  </div>
+  <div class="col-md-6">
+ <h1 class="text-center"><strong>Cargo:</strong>Diseñador</h1>
+
+  </div>
+</div>   
 
 <table class="table">
   <thead class="thead-dark">

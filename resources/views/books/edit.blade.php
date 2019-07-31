@@ -1,7 +1,7 @@
 @extends('books.layout')
 
 @section('content')
-<h1 class="text-center">Actualizar tarea</h1>
+<h1 class="text-center">Actualizar proyecto</h1>
 <hr>
 @if (Session::has('message'))
       <div class="alert alert-info">{{ Session::get('message') }}</div>
@@ -41,7 +41,7 @@
       <input type="date" id="" class="fadeIn second" name="fecha" value={{ $book->fecha }} placeholder="Escribe la fecha de la tarea asignada">
       <br>
       <label for="nombre" class="col-3 col-form-label">Terminino la tarea</label>
-      <input type="text" id="" class="fadeIn second" name="terminado" value={{ $book->terminado }} placeholder="Terminino la tarea">
+      <input type="checkbox" name="terminado" value={{ $book->terminado }} placeholder="No"> 
       <br>
       <label for="nombre" class="col-3 col-form-label">Escribe un comentario</label>
       <input type="text" id="" class="fadeIn second" name="comentarios" value=  {{ $book ->comentarios }} placeholder="Escribe un comentario">

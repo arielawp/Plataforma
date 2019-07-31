@@ -1,0 +1,33 @@
+#page-wrapper{
+    background-image: url('../images/08.jpg');
+    background-repeat: no-repeat;
+}
+.nav>li {
+    position: relative;
+    display: block;
+    background: #777c80;
+    color: #fff !important;
+
+}
+.h4, h4 {
+    font-size: 18px;
+    background: #5e98a6;
+    color: #fff !important;
+}
+h4, h4, h3 {
+    font-size: 18px;
+    color: white !important;
+}
+h4, h4, h3:hover {
+    font-size: 18px;
+    color:#777c80 !important;
+
+}
+.row h1{
+    border-radius: 90px ;
+    background: #fff;
+}
+
+.row h1 strong{
+color: #5e98a6;
+}

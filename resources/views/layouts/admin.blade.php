@@ -15,6 +15,8 @@
     <link href="{{ asset('css/metisMenu.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ asset('images') }}">
+
 </head>
 
 <body>
@@ -54,52 +56,44 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#"><i style="background: #000;" class="fa fa-users fa-fw" ></i> Usuario<span class="fa arrow" ></span></a>
+                            <a href="{{ route ('usuario.create') }}"><i  class="fa fa-user fa-fw" ></i> Usuario<span class="fa arrow" ></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="{{ route ('usuario.create') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Usuarios</a>
-                                </li>
+                           
                             </ul>
                         </li>
+                        <!-- fa fa-user fa-fw -->
                         <li>
-                            <a href=""><i class="fa fa-film fa-fw"></i> Auxiliar Manager<span class="fa arrow"></span></a>
+                            <a href=""><i class=""></i><h4> Project Manager</h4></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route('books.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{{ route('books.index') }}"><i class=''></i> <h3>Fernando
+                                    </h3></a>
                                 </li>
-                                <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Project Manager</a>
-                                </li>
+                             
                             </ul>
                         </li>
                          <li>
-                            <a href=""><i class="fa fa-film fa-fw"></i> Programador<span class="fa arrow"></span></a>
+                            <a href=""><i class=""></i> <h4>Programador</h4></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route ('waters.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{{ route ('waters.index') }}"><i class=''></i> <h3>Vero</h3></a>
                                 </li>
-                                <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Programador</a>
-                                </li>
+                               
                             </ul>
                         </li> 
 
                         <li>
-                            <a href="#"><i class="fa fa-child fa-fw"></i> Diseñador<span class="fa arrow"></span></a>
+                            <a href="#"><i class=""></i> <h4>Diseñador</h4></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route('disenos.index') }}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{{ route('disenos.index') }}"><i class=''></i> <h3>Nancy</h3></a>
                                 </li>
-                                <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Diseñador</a>
-                                </li>
+                             
                             </ul>
                         </li>
 
                      <!-- 
+                         fa fa-plus fa-fw
                         <li>
                             <a href="#"><i class="fa fa-film fa-fw"></i> Project Manager<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">

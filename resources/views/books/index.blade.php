@@ -3,7 +3,7 @@
 
 @section('content')
 
-<H1 class="text-center">&copy; ariel</H1>
+<br>
 <div class="container">
 
     
@@ -17,9 +17,19 @@
     @endif
 
 
-    <H1 class="text-center">Auxiliar</H1>
+    <H1 class="text-center"></H1>
 
+    <div class="row">
+  <div class="col-md-6">
+  <h1 class="text-center"><strong>Nombre:</strong>Fernando</h1>  
 
+  </div>
+  <div class="col-md-6">
+ <h1 class="text-center"><strong>Cargo:</strong>Project Manager</h1>
+
+  </div>
+</div>   
+<br>
 <table class="table">
   <thead class="thead-dark">
     <tr>
